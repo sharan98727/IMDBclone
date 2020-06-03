@@ -1,43 +1,39 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import Home from "./Home";
-import IMDB from "./Home";
-import Menu from "./Home";
-import Search from "./Home";
-import IMDbPro from "./Home";
-import WatchList from "./Home";
-import SignIn from "./Home";
+import React from 'react'
+import Search from './search'
+import Menu from './Menu';
+import Button from './Button'
+import {Link} from 'react-router-dom';
 
-const Navigation = () => {
+import '../bootstrap-4.0.0/bootstrap-4.0.0/dist/css/bootstrap.min.css'
+
+export default function Navigation() {
   return (
     <div>
-      <Switch>
-        <Route path exact="/">
-          <Home />
-        </Route>
-        <Route path exact="/IMDB">
-          <IMDB />
-        </Route>
-        <Route path exact="/Menu">
-          <Menu />
-        </Route>
-        <Route path exact="/Search">
-          <Search />
-        </Route>
-        <Route path exact="/IMDbPro">
-          <IMDbPro />
-        </Route>
-        <Route path exact="/WatchList">
-          <WatchList />
-        </Route>
-        <Route path exact="/SignIn">
-          <SignIn />
-        </Route>
-      </Switch>
+    <nav className = " navbar-expand-sm bg-dark navbar-dark text-white ">
+     <form class="form-inline">
+    <h3><span class="badge mx-2 badge-warning"><b>IMDB</b></span></h3>
+   
+    <Link className="navbar-brand ml-2" to="/">
+    <Menu  title = "Menu"/>
+   </Link>
+   
+
+     <Link className="navbar-brand ml-3" to="/">
+       <Search />
+   </Link>
+   <Link className="navbar-brand ml-2" to="/">
+    <Button  title = "IMDBPro"/>
+   </Link>
+   <span className="bg-dark">|</span>
+
+   <Link className="navbar-brand ml-2" to="/">
+    <Button  title = "WatchList"/>
+   </Link>
+   <Link className="navbar-brand ml-2" to="/">
+    <Button  title = "Sign In"/>
+   </Link>
+      </form>
+      </nav>
     </div>
-  );
-};
-
-export default Navigation;
-
-
+  )
+}
