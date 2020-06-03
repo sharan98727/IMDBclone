@@ -15,22 +15,22 @@ const Navigation = () => {
         <Route path exact="/">
           <Home />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/IMDB">
           <IMDB />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/Menu">
           <Menu />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/Search">
           <Search />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/IMDbPro">
           <IMDbPro />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/WatchList">
           <WatchList />
         </Route>
-        <Route path exact="/">
+        <Route path exact="/SignIn">
           <SignIn />
         </Route>
       </Switch>
@@ -39,4 +39,5 @@ const Navigation = () => {
 };
 
 export default Navigation;
+
 
