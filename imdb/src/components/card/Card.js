@@ -10,9 +10,10 @@ import './favorites.css';
 const Top = (Props) =>
 {
     return (
-    <div>
+    <div className="cards">
     <img src={Props.img} alt="" width={200} height={300} mode="fit" />
-    <div>sharan</div>
+    <div>{Props.name}</div>
+    <button onClick= "validation">WatchList</button>
     </div>
     );
 }
@@ -23,12 +24,12 @@ const Card = () =>
     return(
 
         <div className="favorites">
-          <Top img={card1} />
-          <Top img={card2} />
-          <Top img={card3} />
-          <Top img={card4} />
-          <Top img={card5} />
-          <Top img={card6} />
+          <Top img={card1} name="Paatal Lok" />
+          <Top img={card2} name="Joker"/>
+          <Top img={card3} name="Gisaengching"/>
+          <Top img={card4} name="The Last Dance"/>
+          <Top img={card5} name="1917"/>
+          <Top img={card6} name="Knives Out"/>
 
           </div>
 
