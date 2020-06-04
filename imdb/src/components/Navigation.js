@@ -3,12 +3,14 @@ import Search from './search'
 import Menu from './Menu';
 import Button from './Button'
 import {Link} from 'react-router-dom';
+import Card from './card/Card';
+
 
 import '../bootstrap-4.0.0/bootstrap-4.0.0/dist/css/bootstrap.min.css'
 
 export default function Navigation() {
   return (
-    <div>
+    <div >
     <nav className = " navbar-expand-sm bg-dark navbar-dark text-white ">
      <form class="form-inline">
     <h3><span class="badge mx-2 badge-warning"><b>IMDB</b></span></h3>
@@ -34,6 +36,7 @@ export default function Navigation() {
    </Link>
       </form>
       </nav>
+   <Card />
     </div>
-  )
+  )  
 }
