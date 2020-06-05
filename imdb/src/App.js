@@ -1,16 +1,15 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
-import Navigation from "./components/Navigation";
+import Header from './components/header/index'
+
+
+
 
 
 export default function App() {
   return (
-   
-    <BrowserRouter>
-     <Navigation />
-      
-    </BrowserRouter>
+   <Header />
+    
   );
 }
 
