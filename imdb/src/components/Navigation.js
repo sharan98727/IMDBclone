@@ -33,7 +33,7 @@ export default function Navigation() {
    </Link>
    <span className="bg-dark">|</span>
 
-   <Link className="navbar-brand ml-2" to="/">
+   <Link className="navbar-brand ml-2" to="/signin">
     <Button  title = "WatchList"/>
    </Link>
    <Link className="navbar-brand ml-2" to="/signin">
