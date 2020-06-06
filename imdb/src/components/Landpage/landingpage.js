@@ -26,9 +26,10 @@ import './landpage.css';
         var {poster_path} = this.state.data
         return (
             <div>
-                <div className="card   text-center bg-dark text-white">
+                
+                <div className="card  text-center bg-dark  text-white" width="100%">
                    <div className="card-head">
-                <img src = {`${url}${poster_path}`}  width="80%" height="400px"  alt="shhhh" className="imgstyle" />
+                <img src = {`${url}${poster_path}`}  width="100%" height="400px"  alt="shhhh" className="imgstyle" />
             </div>
                <div className="card-body">
         <h3>{this.state.data.title}</h3>
@@ -36,6 +37,7 @@ import './landpage.css';
                </div>
             </div>
             </div>
+            
         )
     }
 }
