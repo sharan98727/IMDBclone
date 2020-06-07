@@ -22,17 +22,16 @@ class Home extends Component {
       );
     });
     return (
-      <div >
-        <h3 className="sha" style={{color:"white"}}>Fan favorites</h3>
-        <h4 > This week's top TV and movies </h4>
+      <div style={{padding:15}}>
         <div className="box">{itemList}</div>
       </div>
     );
   }
 }
+//first arguement passes the total state
 const mapStateToProps = state => {
   return {
-    items: state.items
+    items: state.items  //but here we are taking only the items we require for this file
   };
 };
 
