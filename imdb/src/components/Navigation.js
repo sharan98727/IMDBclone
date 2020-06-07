@@ -3,6 +3,8 @@ import Search from './search'
 import Menu from './Menu';
 import Button from './Button'
  import {Link} from 'react-router-dom';
+ import WatchList from "./watchlist"
+
 
 
 
@@ -20,7 +22,7 @@ export default function Navigation() {
     
    
   
-    <Link className="navbar-brand ml-2" to="/">
+    <Link className="navbar-brand ml-2" to="/watchlist">
     <Menu  title = "Menu"/>
    </Link>
    
@@ -33,10 +35,10 @@ export default function Navigation() {
    </Link>
    <span className="bg-dark">|</span>
 
-   <Link className="navbar-brand ml-2" to="/signin">
-    <Button  title = "WatchList"/>
+   <Link className="navbar-brand ml-2" to="/watchlist"  >
+    <Button  title = "WatchList"/> 
    </Link>
-   <Link className="navbar-brand ml-2" to="/signin">
+   <Link className="navbar-brand ml-2" to="/Signin">
     <Button  title = "Sign In"/>
    </Link>
 

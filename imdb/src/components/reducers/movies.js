@@ -15,13 +15,22 @@ const initState = {
       {id:6,title:'Knives Out', rating:'7.9',img:card6}],
       
   Watchlist:[],
-  total: 0
+  
 
 }
 
 const movies = (state=initState,action) =>
 {
-  return state;
+  switch (action.type) {
+    case 'ADD_TO_WATCHLIST':
+      const Watchlist = [...state.Watchlist, action.payload.id];
+      return {
+        ...state,
+        Watchlist
+      }
+    default:
+      return state;
+  }
 }
 
 export default movies;

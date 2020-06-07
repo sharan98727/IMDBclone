@@ -5,6 +5,9 @@ import Navigation from "../Navigation"
 //import Card from '../card/Card'
 import SignIn from '../SignIn/Form'
 import Container from '../CaroselContainer'
+import WatchList from "../watchlist"
+
+
 
 function template() {
   return (
@@ -14,7 +17,10 @@ function template() {
      <Navigation  />
      
      <Route path="/" exact component={Container} />
+   <Route path="/watchlist" component={WatchList} />
+
    <Route path="/signin" component={SignIn} />
+ 
    </BrowserRouter>
       
    
