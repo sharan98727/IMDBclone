@@ -12,8 +12,8 @@ import './landpage.css';
     componentDidMount() {
         fetch("https://api.themoviedb.org/3/movie/550?api_key=489807c43664b9f441a43b7d1ce59dda").then(Response => Response.json()).then(data =>{
            console.log(data) ;
-           console.log(data.poster_path) ;
-           alert(data.title)
+           
+           
           this.setState({
               data:data,
               url:"https://image.tmdb.org/t/p/w500"
