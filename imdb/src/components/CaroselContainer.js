@@ -1,7 +1,7 @@
 import React from 'react'
 import '../bootstrap-4.0.0/dist/css/bootstrap.min.css'
 import Carosel from './Carosel/carosel'
-import Card from '../components/card/Card'
+import Home from '../components/cards/Home'
 import Footer from '../components/footer/foot'
 import Landing from '../components/Landpage/landingpage'
 
@@ -15,9 +15,9 @@ export default function ccc() {
                     <Landing />
                     </div>
                 </div>
-                <div className="row mx-5">
-                <div className ="col-md-11">
-                    <Card />
+                <div>
+                <div>
+                    <Home />
                     </div>
                 </div>
                 <div className = "row mx-2">
