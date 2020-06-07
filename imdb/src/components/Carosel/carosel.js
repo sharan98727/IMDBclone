@@ -21,7 +21,7 @@ import './style.css'
   {
     fetch("https://api.themoviedb.org/3/movie/popular?api_key=489807c43664b9f441a43b7d1ce59dda&Language=en-US&page=1").then(response => response.json()).then(data => {
       console.log(data.results[0].poster_path)
-      alert("Carosel")
+    
       this.setState({
         moviedata : data.results,
         url:"https://image.tmdb.org/t/p/w300"
