@@ -13,13 +13,14 @@ import './style.css'
    constructor(props) {
        super(props)
        this.state = {
-         moviedata : []
+         moviedata : [],
+         page:props.page
        }
    }
 
   componentDidMount()
   {
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=489807c43664b9f441a43b7d1ce59dda&Language=en-US&page=1").then(response => response.json()).then(data => {
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=489807c43664b9f441a43b7d1ce59dda&Language=en-US&page=${this.state.page}`).then(response => response.json()).then(data => {
       console.log(data.results[0].poster_path)
     
       this.setState({
@@ -38,13 +39,17 @@ import './style.css'
 
                   {moviedata && moviedata.map((movie,i) => {
                     return <Carousel.Item >
+                      <div class="card">
+                        <div className="card-head">
                     <img
                       className="d-block w-100"
                       src= {movie.poster_path && `${url}${movie.poster_path}`}
                       alt="First slide"
+                      height="300px"
                      
                     />
-                    
+                    </div>
+                    </div>
                   </Carousel.Item>
                   })}
   

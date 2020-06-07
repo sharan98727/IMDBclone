@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "./style.css";
 
+
 class Home extends Component {
   render() {
     let itemList = this.props.items.map(item => {
@@ -23,7 +24,9 @@ class Home extends Component {
     });
     return (
       <div style={{padding:15}}>
+       
         <div className="box">{itemList}</div>
+        
       </div>
     );
   }

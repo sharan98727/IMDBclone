@@ -10,7 +10,7 @@ import './landpage.css';
         }
     }
     componentDidMount() {
-        fetch("https://api.themoviedb.org/3/movie/550?api_key=489807c43664b9f441a43b7d1ce59dda").then(Response => Response.json()).then(data =>{
+        fetch("https://api.themoviedb.org/3/movie/18?api_key=489807c43664b9f441a43b7d1ce59dda").then(Response => Response.json()).then(data =>{
            console.log(data) ;
            
            
@@ -29,11 +29,11 @@ import './landpage.css';
                 
                 <div className="card  text-center bg-dark  text-white" width="100%">
                    <div className="card-head">
-                <img src = {`${url}${poster_path}`}  width="100%" height="400px"  alt="shhhh" className="imgstyle" />
+                <img src = {`${url}${poster_path}`}  width="100%" height="300px"  alt="shhhh" className="imgstyle" />
             </div>
                <div className="card-body">
         <h3>{this.state.data.title}</h3>
-        <p>{this.state.data.text}</p>
+        <p>{this.state.data.overview}</p>
                </div>
             </div>
             </div>
