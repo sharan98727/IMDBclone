@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Carousel} from 'react-bootstrap'
-//import imag1 from '../card/cardimages/card1.jpg'
+
 import './style.css'
 
 

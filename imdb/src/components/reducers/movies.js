@@ -5,6 +5,7 @@ import card4 from "../cardimages/card4.jpeg";
 import card5 from "../cardimages/card5.jpg";
 import card6 from "../cardimages/card6.jpg";
 
+
 const initState = {
   items: [
       {id:1,title:'Paatal lok', rating:'7.5',img:card1},
@@ -15,6 +16,7 @@ const initState = {
       {id:6,title:'Knives Out', rating:'7.9',img:card6}],
       
   Watchlist:[],
+  data : []
   
 
 }
@@ -28,9 +30,16 @@ const movies = (state=initState,action) =>
         ...state,
         Watchlist
       }
+
+      case 'SD' :
+         return  {
+           ...state,
+           data: action.payload
+         }
     default:
       return state;
   }
+ 
 }
 
 export default movies;

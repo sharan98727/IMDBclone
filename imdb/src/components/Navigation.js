@@ -3,7 +3,7 @@ import Search from './search'
 import Menu from './Menu';
 import Button from './Button'
  import {Link} from 'react-router-dom';
- import WatchList from "./watchlist"
+ //import WatchList from "./watchlist"
 
 
 
@@ -27,7 +27,7 @@ export default function Navigation() {
    </Link>
    
 
-     <Link className="navbar-brand ml-3" to="/">
+     <Link className="navbar-brand ml-3" to="/search">
        <Search />
    </Link>
    <Link className="navbar-brand ml-2" to="/">

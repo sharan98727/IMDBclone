@@ -6,6 +6,7 @@ import Navigation from "../Navigation"
 import SignIn from '../SignIn/Form'
 import Container from '../CaroselContainer'
 import WatchList from "../watchlist"
+import SearchBar from '../searchbardata'
 
 
 
@@ -20,6 +21,8 @@ function template() {
    <Route path="/watchlist" component={WatchList} />
 
    <Route path="/signin" component={SignIn} />
+   <Route path="/search" component={Container} />
+   <Route path="/searchbar" component={SearchBar} />
  
    </BrowserRouter>
       

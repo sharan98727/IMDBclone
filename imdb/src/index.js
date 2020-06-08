@@ -9,10 +9,11 @@ import App from "./App";
 const store = createStore(movies);
 
 const rootElement = document.getElementById("root");
+console.log(store.getState())
 ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
   rootElement
 );
-
+export default store;
