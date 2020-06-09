@@ -56,7 +56,10 @@ class search extends React.Component{
 
     
     if(this.state.isData) {
-    
+      
+    this.setState({
+      isData:false
+    })
     return <Redirect to="/searchbar" />
     }
         
@@ -76,7 +79,7 @@ class search extends React.Component{
       </div>
       <div>
       <input value={this.state.query} type="text" class="form-control" placeholder="Search Movie" onChange={this.handleChange}  />
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={() => this.getData(this.state.query)}>Search</button>
+      <button class="btn  my-2 my-sm-0" type="submit" onClick={() => this.getData(this.state.query)}>Search</button>
       </div>
                     
                 
@@ -84,6 +87,8 @@ class search extends React.Component{
         
       
     </div>
+    
+       
   
         </div>
     )
