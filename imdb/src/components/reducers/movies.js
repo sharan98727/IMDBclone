@@ -17,15 +17,13 @@ const initState = {
       
   Watchlist:[],
   data : []
-  
-
 }
-
+// {type: 'ADD_TO_WATCHLIST', payload: {item: item}}
 const movies = (state=initState,action) =>
 {
   switch (action.type) {
     case 'ADD_TO_WATCHLIST':
-      const Watchlist = [...state.Watchlist, action.payload.id];
+      const Watchlist = [...state.Watchlist, action.payload.item];
       return {
         ...state,
         Watchlist

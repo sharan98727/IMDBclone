@@ -4,8 +4,8 @@ import "./style.css";
 
 class Home extends Component {
 
-  handleClick = id => {
-    this.props.addToWatchlist(id);
+  handleClick = item => {
+    this.props.addToWatchlist(item);
   };
 
   render() {
@@ -23,7 +23,7 @@ class Home extends Component {
             <div>{item.title}</div>
             <div>Rating:{item.rating}</div>
             <button onClick={() => {
-                this.handleClick(item.id);
+                this.handleClick(item);
               }}
             >Add</button>
           </div>
@@ -50,8 +50,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addToWatchlist: id => {
-      dispatch({type: 'ADD_TO_WATCHLIST', payload: {id: id,}});
+    addToWatchlist: item => {
+      dispatch({type: 'ADD_TO_WATCHLIST', payload: {item: item}});
     }
   };
 };
