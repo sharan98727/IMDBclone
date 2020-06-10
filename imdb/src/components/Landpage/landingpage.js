@@ -27,9 +27,9 @@ import './landpage.css';
         return (
             <div>
                 
-                <div className="card  text-center bg-dark  text-white" width="100%">
+                <div className="card   bg-dark  text-white" width="100%">
                    <div className="card-head">
-                <img src = {`${url}${poster_path}`}  width="100%" height="300px"  alt="shhhh" className="imgstyle" />
+                <img src = {`${url}${poster_path}`}  width="100%" height="300px"  alt="shhhh" />
             </div>
                <div className="card-body">
         <h3>{this.state.data.title}</h3>
